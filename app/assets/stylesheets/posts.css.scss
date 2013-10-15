@@ -1,3 +1,47 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=The+Girl+Next+Door);
+@import url(http://fonts.googleapis.com/css?family=Voces);
+
+$primary-color: #b86bff;
+$secondary-color: #ff6b8b;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+h1,h2,h3,h4,h5 {
+  color: $primary-color;
+}
+
+
+.post-preview {
+  border-bottom: 3px solid $primary-color;
+}
+
+a, a:visited {
+  color: darken($primary-color, 30%);
+}
+
+
+article {
+  h1.title {
+  font-family: 'The Girl Next Door';
+  color: $secondary-color;
+  }
+
+  time{
+  font-family: 'Voces';
+  color: darken($secondary-color, 30%);
+  font-size: 0.8em;
+  @include border-radius(5px);
+  }
+
+  .body {
+  font-family: 'Voces';
+  color: darken($secondary-color, 30%);
+  line-height: 1.5em;
+  }
+}
